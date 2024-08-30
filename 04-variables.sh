@@ -9,5 +9,5 @@ echo "I love india"
 echo  " I hate Love stories "
 echo " I love Denver "
 echo "Please Enter username ::"
-read USERNMAE 
+read  USERNAME 
 echo "Username entered is : $USERNAME"  
