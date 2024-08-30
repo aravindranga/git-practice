@@ -8,3 +8,6 @@ echo " I am in india "
 echo "I love india"
 echo  " I hate Love stories "
 echo " I love Denver "
+echo "Please Enter username ::"
+read USERNMAE 
+echo "Username entered is : $USERNAME"  
