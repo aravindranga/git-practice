@@ -3,7 +3,24 @@
 USERID=$(id -u)
 # echo "User ID is :$USERID"
 
-if [ $USERID -eq 0 ]
-then echo "User ID is : ROOT"
-else echo  "User ID is : not ROOT"
+if [ $USERID -ne 0 ]
+then 
+    echo "PLease run this script with root privileges"
+    exit 1
+fi
+
+ dnf list installed git 
+
+ if [ $? -ne 0 ]
+ then 
+     echo " Git is not installed , going to install it .. "
+     dnf install git -y 
+     if [ $? -ne 0 ]
+     then 
+         echo " git installation is not success .. check it "
+         exit 1
+     else 
+        echo " Git installation is success "
+    fi 
+else echo  "Git is already installed , nothing to do .."
 fi
