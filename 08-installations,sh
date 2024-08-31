@@ -1,0 +1,4 @@
+#!/bin/bash
+
+USERID=S(id -u)
+echo "User ID is :$USERID"
